@@ -1,0 +1,151 @@
+<div fxLayout="row">
+    <div fxFlex.gt-sm="100%">
+        <mat-toolbar class="card-header">
+            <div class="header">
+                <p>Gestión de Transacciones</p>
+            </div>
+        </mat-toolbar>
+        <mat-card>
+            <mat-card-content>
+                <form>
+                    <div fxLayout="row" fxLayoutAlign="center">
+
+                        <div fxFlex.gt-sm="25" fxFlex.gt-xs="25" id="formSearch">
+                            <mat-form-field fxFlex required>
+                                <mat-select placeholder=" Categorías">
+                                    <mat-option [value]="1">Presentación</mat-option>
+                                    <mat-option [value]="2">Segundo Contracargo Total</mat-option>
+                                    <mat-option [value]="3">Confirmación Petición Vale</mat-option>
+                                    <mat-option [value]="4">Objeciones</mat-option>
+                                    <mat-option [value]="5">Confirmación Recepción Vales</mat-option>
+                                    <mat-option [value]="6">Primer Contracargo Total</mat-option>
+                                    <mat-option [value]="7">Segundo Contracargo Parcial</mat-option>
+                                    <mat-option [value]="8">Representación Total</mat-option>
+                                    <mat-option [value]="9">Rechazos</mat-option>
+                                    <mat-option [value]="10">Primer Contracargo Parcial</mat-option>
+                                    <mat-option [value]="11">Petición Vale</mat-option>
+                                    <mat-option [value]="12">Representación Parcial</mat-option>
+                                    <mat-option [value]="13">Recuperación Cobro de Cargos Incoming</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex.gt-lg="30" fxFlex.gt-lg="30" id="formSearch"></div>
+                        <mat-form-field>
+                            <input matInput placeholder="Monto" value="">
+                        </mat-form-field>
+                        <div fxFlex.gt-lg="30" fxFlex.gt-lg="30" id="formSearch"></div>
+                        <mat-form-field>
+                            <input matInput placeholder="Código Auto" value="">
+                        </mat-form-field>
+                        <div fxFlex.gt-lg="30" fxFlex.gt-lg="30" id="formSearch"></div>
+                        <mat-form-field>
+                            <input matInput placeholder="Origen" value="">
+                        </mat-form-field>
+                        <div fxFlex.gt-lg="30" fxFlex.gt-lg="30" id="formSearch"></div>
+                        <div fxFlex.gt-sm="25" fxFlex.gt-xs="25" id="formSearch">
+                            <mat-form-field class="example-full-width">
+                                <input matInput [matDatepicker]="picker" placeholder="Fecha de inicio" required>
+                                <mat-datepicker-toggle matSuffix [for]="picker">
+                                    <mat-icon matDatepickerToggleIcon>event</mat-icon>
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" id="formSearch"></div>
+                        <div fxFlex.gt-sm="25" fxFlex.gt-xs="25" id="formSearch">
+                            <mat-form-field>
+                                <input matInput [matDatepicker]="picker1" placeholder="Fecha de fin" required>
+                                <mat-datepicker-toggle matSuffix [for]="picker1">
+                                    <mat-icon matDatepickerToggleIcon>event</mat-icon>
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
+                                <mat-error *ngIf="">Este campo no puede ser vacio</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" id="formSearch"></div>
+                        <div fxFlex.gt-sm="25" fxFlex.gt-xs="25" id="formSearch">
+                            <mat-dialog-actions fxLayout fxLayoutAlign="center">
+                                <button mat-raised-button color="primary" type="submit" id="boton">Buscar
+					<mat-icon>search</mat-icon>
+				  </button>
+                            </mat-dialog-actions>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!-- Position Column -->
+            <ng-container matColumnDef="num_tc">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> No.TC </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.num_tc}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="fecha">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Fecha Transacc </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.fecha}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="comercio">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Comercio </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.comercio}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="pais">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> País </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.pais}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="origen">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Origen </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.origen}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="mont_orig">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Monto Orig </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.mont_orig}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="monto_fact">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Monto Fact. </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.monto_fact}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="cod_razon">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Cod Razon </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.cod_razon}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Estatus </th>
+                <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.status}} </td>
+            </ng-container>
+
+            <!-- Detalle Column -->
+            <ng-container matColumnDef="detalle">
+                <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Detalle </th>
+                <td mat-cell *matCellDef="let row" style="text-align: center;">
+                    <a [routerLink]="['/', 'editar-transaccion', row.num_tc]" >
+                        <mat-icon class="icon" id="ico" matTooltip="Detalles" matTooltipPosition="above">preview</mat-icon>
+                    </a>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+        </mat-paginator>
+
+    </div>
+
+
+</div>

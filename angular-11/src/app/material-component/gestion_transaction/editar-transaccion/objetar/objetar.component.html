@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Objetar Transacción</h1>
+<div mat-dialog-content style="width:auto!important;">
+    <div fxLayout="column" fxFlex >
+        <div style="margin-left: 20px; width: 700px;">
+            <mat-form-field fxFlex required>
+                <mat-select placeholder="Tipo de Objeción">
+                    <mat-option [value]="1">Compras en comercios Transbank que el cliente no conoce</mat-option>
+                    <mat-option [value]="2">Segundo Contracargo Total</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div style="margin-left: 20px; width: 700px;">
+            <mat-form-field class="stretch-height">
+                <textarea matInput formControlName="myControl" placeholder="Glosa"></textarea>
+              </mat-form-field>
+        </div>
+    </div>
+</div>
+<button mat-raised-button mat-dialog-close color="primary">Cerrar</button>

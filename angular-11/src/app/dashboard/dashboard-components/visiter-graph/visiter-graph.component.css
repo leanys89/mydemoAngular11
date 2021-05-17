@@ -1,0 +1,14 @@
+.piechart .ct-series-b .ct-slice-donut {
+    stroke: #264bda!important;
+}
+
+.piechart .ct-series-a .ct-slice-donut {
+    stroke: #e51e5f!important;
+}
+
+.ct-label {
+    fill: rgba(9, 7, 0, 0.77)!important;
+    color: rgba(179, 162, 74, 0.84)!important;
+    font-size: 1.8rem!important;
+    line-height: 1!important;
+}

@@ -1,0 +1,159 @@
+<div fxLayout="row">
+    <div fxFlex.gt-sm="100%">
+        <mat-toolbar class="card-header">
+            <div class="header">
+                <p>Gestines de Cuentas</p>
+            </div>
+        </mat-toolbar>
+        <mat-card>
+            <mat-card-content>
+                <form  id="formGestionCta">
+                    <div fxLayout="row" fxLayoutAlign="center">
+						<div fxFlex.gt-sm="25" fxFlex.gt-xs="25">
+                            <mat-form-field class="example-full-width">
+                                <input matInput  placeholder="No. Tarjeta"  type="text" id="num_tarj" required>
+
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex.gt-sm="30" fxFlex.gt-xs="30"></div>
+                        <div fxFlex.gt-sm="25" fxFlex.gt-xs="25">
+                            <mat-form-field class="example-full-width">
+                                <input matInput [matDatepicker]="picker" placeholder="Fecha de inicio" id="fecha_ini" required>
+                                <mat-datepicker-toggle matSuffix [for]="picker">
+                                    <mat-icon matDatepickerToggleIcon>event</mat-icon>
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex.gt-sm="30" fxFlex.gt-xs="30"></div>
+                        <div fxFlex.gt-sm="25" fxFlex.gt-xs="25" >
+                            <mat-form-field>
+                                <input matInput [matDatepicker]="picker1" placeholder="Fecha de fin" id="fecha_fin" required>
+                                <mat-datepicker-toggle matSuffix [for]="picker1">
+                                    <mat-icon matDatepickerToggleIcon>event</mat-icon>
+                                </mat-datepicker-toggle>
+                                <mat-datepicker #picker1></mat-datepicker>
+                                <mat-error *ngIf="">Este campo no puede ser vacio</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex.gt-sm="30" fxFlex.gt-xs="30"></div>
+                        <div fxFlex.gt-sm="25" fxFlex.gt-xs="25">
+                            <mat-dialog-actions fxLayout fxLayoutAlign="center">
+                                <button mat-raised-button color="primary" type="submit" id="boton">Buscar
+					<mat-icon>search</mat-icon>
+				  </button>
+                            </mat-dialog-actions>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+		<mat-card>
+			<mat-tab-group>
+				<mat-tab label="Hitorial de Gestiones">
+					<table mat-table class="mat-elevation-z8" style="width: 100%;">
+						<!-- Position Column -->
+						<ng-container matColumnDef="fecha">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Fecha </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> 27/04/2021 </td>
+						</ng-container>
+			
+						<!-- Accion Column -->
+						<ng-container matColumnDef="accion">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Accion</th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Accion</td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="causal">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Causal </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Causal</td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="razon">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Razón </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Razon </td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="moneda">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Moneda </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> USD </td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="monto">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Monto </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Monto </td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="usuario">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;">Usuario </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Usuario </td>
+						</ng-container>
+			
+						<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+						<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+					</table>
+					<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+					</mat-paginator>				
+				</mat-tab>
+				<mat-tab label="Historial de Cargos y Abonos"> 
+					<table mat-table class="mat-elevation-z8" style="width: 100%;">
+						<!-- Position Column -->
+						<ng-container matColumnDef="fecha">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Fecha </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> 27/04/2021 </td>
+						</ng-container>
+			
+						<!-- Accion Column -->
+						<ng-container matColumnDef="accion">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Accion</th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Accion</td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="causal">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Causal </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Causal</td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="razon">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Razón </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Razon </td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="moneda">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Moneda </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> USD </td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="monto">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Monto </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Monto </td>
+						</ng-container>
+			
+						<!-- Weight Column -->
+						<ng-container matColumnDef="usuario">
+							<th mat-header-cell *matHeaderCellDef style="text-align: center;">Usuario </th>
+							<td mat-cell *matCellDef="let element" style="text-align: center;"> Usuario </td>
+						</ng-container>
+			
+						<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+						<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+					</table>
+					<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+					</mat-paginator>	
+				</mat-tab>
+
+			</mat-tab-group>	
+		</mat-card>
+		
+    </div>  
+
+?

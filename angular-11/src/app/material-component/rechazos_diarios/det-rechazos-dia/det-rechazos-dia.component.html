@@ -1,0 +1,51 @@
+<h1 mat-dialog-title>Datos de la Transacción</h1>
+<div mat-dialog-content>
+	<div fxLayout="row" fxFlex>
+		<div style="margin-left: 20px;">
+			<mat-form-field>
+				<input matInput placeholder="Microfilm" value="{{data?.microfilm}}" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Fecha Efectiva" value="{{data?.fecha}}" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Bin Adquiriente" value="{{data?.bin}}" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Código Moneda Trx" value="{{data?.cod_mone}}" disabled>
+			</mat-form-field>
+		</div>
+		<div style="margin-left: 20px;">
+			<mat-form-field>
+				<input matInput placeholder="Código Autorización" value="{{data?.cod_aut}}" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Fecha Proceso" value="{{data?.fecha_proceso}}" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Lee Banda" value="{{data?.lee_banda}}" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Rubro Comercio" value="{{data?.rubro}}" disabled>
+			</mat-form-field>
+		</div>
+		<div style="margin-left: 20px;">
+			<mat-form-field>
+				<input matInput placeholder="Código Proceso" value="6569Dd8Sd" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Conv. Conc." value="Prueba" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Conv. Fact." value="Comercio" disabled>
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Pto. Servicio" value="Punto inicial" disabled>
+			</mat-form-field>
+		</div>
+	</div>
+</div>
+<div mat-dialog-actions>
+	<button mat-raised-button mat-dialog-close color="primary">Cerrar</button>
+	<button mat-raised-button mat-dialog-close color="accent">Exportar Excel</button>
+</div>

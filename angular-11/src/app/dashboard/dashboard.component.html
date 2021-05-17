@@ -1,0 +1,123 @@
+<!-- ============================================================== -->
+<!-- Simple four boxes Row -->
+<!-- ============================================================== -->
+
+<div fxLayout="row wrap">
+    
+    <div fxFlex.gt-lg="25" fxFlex.gt-md="25" fxFlex.gt-xs="100" fxFlex="100">
+        <app-visiter-graph [dataJson]=datosOK [title]=datosOK.title [correctas]=datosOK.correctas [erroneas]=datosOK.erroneas></app-visiter-graph>
+    </div>
+   
+    <div fxFlex.gt-lg="25" fxFlex.gt-md="25" fxFlex.gt-xs="100" fxFlex="100">
+      <app-visiter-graph [dataJson]=datos1 [title]=datos1.title [correctas]=datos1.correctas [erroneas]=datos1.erroneas></app-visiter-graph>
+    </div>
+
+    <div fxFlex.gt-lg="25" fxFlex.gt-md="25" fxFlex.gt-xs="100" fxFlex="100">
+      <app-visiter-graph [dataJson]=datos2 [title]=datos2.title [correctas]=datos2.correctas [erroneas]=datos2.erroneas></app-visiter-graph>
+    </div>
+
+    <div fxFlex.gt-lg="25" fxFlex.gt-md="25" fxFlex.gt-xs="100" fxFlex="100">
+      <app-visiter-graph [dataJson]=datos3 [title]=datos3.title [correctas]=datos3.correctas [erroneas]=datos3.erroneas></app-visiter-graph>
+    </div>
+
+</div>
+
+<div fxLayout="row wrap">
+  <div fxFlex.gt-lg="12.5" fxFlex.gt-md="12.5" fxFlex.gt-xs="100" fxFlex="100">
+
+      <mat-card>
+          <mat-card-content class="mat-card-content-dash">
+              <div fxLayout="column" fxLayoutAlign="space-between center">
+                <mat-icon matTooltip="Total Trx Cargas Correctas Incoming" class="icon-help">help</mat-icon>
+                  <div class="text-secundary">Cargas Correctas Incoming</div>
+                  <div class="text-center"><b>220</b></div>
+              </div>
+          </mat-card-content>
+      </mat-card>
+  </div>
+
+  <div fxFlex.gt-lg="12.5" fxFlex.gt-md="12.5" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+        <mat-card-content class="mat-card-content-dash">
+            <div fxLayout="column" fxLayoutAlign="space-between center">
+              <mat-icon matTooltip="Total Trx Cargas Erroneas Incoming" class="icon-help">help</mat-icon>
+                <div class="text-secundary">Cargas Erroneas Incoming</div>
+                <div class="text-center"><b>20</b></div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex.gt-lg="12.5" fxFlex.gt-md="12.5" fxFlex.gt-xs="100" fxFlex="100">
+      <mat-card>
+          <mat-card-content class="mat-card-content-dash">
+              <div fxLayout="column" fxLayoutAlign="space-between center">
+                <mat-icon matTooltip="Total Trx Cargas Correctas Rechazadas" class="icon-help">help</mat-icon>
+                  <div class="text-secundary">Cargas Correctas Rechazadas</div>
+                  <div class="text-center"><b>2020</b></div>
+              </div>
+          </mat-card-content>
+      </mat-card>
+  </div>
+
+  <div fxFlex.gt-lg="12.5" fxFlex.gt-md="12.5" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+        <mat-card-content class="mat-card-content-dash">
+            <div fxLayout="column" fxLayoutAlign="space-between center">
+              <mat-icon matTooltip="Total Trx Cargas Erroneas Rechazadas" class="icon-help">help</mat-icon>
+                <div class="text-secundary">Cargas Erroneas Rechazadas</div>
+                <div class="text-center"><b>220</b></div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex.gt-lg="12.5" fxFlex.gt-md="12.5" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+      <mat-card-content class="mat-card-content-dash">
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-icon matTooltip="Total Trx Outgoing Ok" class="icon-help">help</mat-icon>
+              <div class="text-secundary">Outgoing Ok</div>
+              <div class="text-center"><b>220</b></div>
+          </div>
+      </mat-card-content>
+  </mat-card>
+  </div>
+
+  <div fxFlex.gt-lg="12.5" fxFlex.gt-md="12.5" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+      <mat-card-content class="mat-card-content-dash">
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-icon matTooltip="Total Trx Outgoing Pendientes" class="icon-help">help</mat-icon>
+              <div class="text-secundary">Outgoing Pendientes</div>
+              <div class="text-center"><b>220</b></div>
+          </div>
+      </mat-card-content>
+  </mat-card>
+  </div>
+
+  <div fxFlex.gt-lg="12.5" fxFlex.gt-md="12.5" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+      <mat-card-content class="mat-card-content-dash">
+          <div fxLayout="column" fxLayoutAlign="space-between center">
+            <mat-icon matTooltip="Total Trx Cargas Abono Ok" class="icon-help">help</mat-icon>
+              <div class="text-secundary">Cargas Abono Ok</div>
+              <div class="text-center"><b>220</b></div>
+          </div>
+      </mat-card-content>
+  </mat-card>
+</div>
+
+<div fxFlex.gt-lg="12.5" fxFlex.gt-md="12.5" fxFlex.gt-xs="100" fxFlex="100">
+  <mat-card>
+    <mat-card-content class="mat-card-content-dash">
+        <div fxLayout="column" fxLayoutAlign="space-between center">
+          <mat-icon matTooltip="Total Trx Cargas Abono Pendientes" class="icon-help">help</mat-icon>
+            <div class="text-secundary">Cargas Abono Pendientes</div>
+            <div class="text-center"><b>220</b></div>
+        </div>
+    </mat-card-content>
+</mat-card>
+</div>
+
+</div>

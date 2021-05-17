@@ -1,0 +1,73 @@
+mat-card {
+    max-width: 600px;
+    margin-left: 35%!important;
+    padding: 1rem;
+  /* IMPORTANTE */
+    text-align: center;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: #0d9dee;
+    opacity: 1!important;
+  }
+
+  .mat-input-element{
+    margin-left: 20px !important;
+    height: 15px;
+  }
+  .button_login{
+    font-size: large;
+    background-color: #0d9dee;
+    color:rgb(252, 252, 250);;
+  }
+  .header{
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 2%;
+    color: rgb(250, 250, 249);
+  }
+  .card-header{
+    background: #0d9dee;
+    height: 4rem;
+    
+  }
+  .icon{
+    color: #0d9dee;
+    font-size: 36px;
+  }
+
+  .mat-form-field-invalid .mat-icon {
+    color: red;
+  }
+  
+
+  .full-width {
+    width: 80%;
+    font-size: 17px;
+  }
+  
+  .button-row {
+    padding-top: 5px;
+  }
+  
+  .button-row a {
+    margin-right: 8px;
+    text-align: center;
+  }
+ 
+  .emailInput{
+    padding-top: 10px;
+  }
+  
+  .contentBody {
+    min-height: 100%;
+    padding: 60px 2rem;
+    background: #fafafa;
+    display: block;
+  }
+.header-tittle {
+  display: inline-block;
+}
+
+

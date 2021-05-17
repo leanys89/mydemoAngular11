@@ -1,0 +1,12 @@
+{
+  "Bar": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "series": [[9, 4, 11, 7, 10, 12], [3, 2, 9, 5, 8, 10]]
+  },
+  "Pie": {
+    "series": [220,20]
+  },
+  "title":"Total Trx Cargas Incoming",
+  "correctas":"Correctas",
+  "erroneas":"Erroneas"
+}

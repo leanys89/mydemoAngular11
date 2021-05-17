@@ -1,0 +1,56 @@
+th.mat-header-cell{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+td.mat-cell{
+    font-weight: bold; 
+}
+
+.position-relative {
+	position: relative;
+}
+
+.add-contact {
+	position: absolute;
+    right: 17px;
+    top: 57px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-toolbar {
+    background: #26c6da;
+    color: white;
+    font-size: x-large;
+}
+
+.th.mat-header-cell{
+    font-size: 16px!important;
+    font-weight: bold!important;
+    color: black!important;
+}
+
+.text-secundary {
+    color: gray;
+    font-size: 12px!important;
+    text-align: center;
+}
+
+.mat-card-content-dash{
+    padding-top: 0px;
+    padding-right: 15px;
+    height: 110px;
+}
+
+.icon-help{
+    color: gray;
+    margin-left: 100%;
+}
+
+.text-center{
+    font-size: 20px;
+}
+

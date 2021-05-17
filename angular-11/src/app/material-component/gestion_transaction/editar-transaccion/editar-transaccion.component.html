@@ -1,0 +1,87 @@
+<mat-toolbar class="card-header">
+    <div class="header">
+        <p>Datos de la Transacción</p>
+    </div>
+</mat-toolbar>
+<mat-card>
+    <div></div>
+    <div mat-dialog-content>
+        <div fxLayout="row" fxFlex>
+            <div style="margin-left: 40px;margin-top: 40px;">
+                <mat-form-field>
+                    <input matInput placeholder="Microfilm" value="{{dataTransaction?.microfilm}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Monto Original Compra" value="{{dataTransaction?.mont_orig}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Código Proceso" value="{{dataTransaction?.cod_prog}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Conv. Conc" value="{{dataTransaction?.conv}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Conv. Fact." value="{{dataTransaction?.conv_fact}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Pto. Servicio" value="{{dataTransaction?.pto_servicio}}">
+                </mat-form-field>
+            </div>
+            <div style="margin-left: 40px;margin-top: 40px;">
+                <mat-form-field>
+                    <input matInput placeholder="Tipo Promoción" value="{{dataTransaction?.tip_prom}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Info. Adicional Pago Cuotas" value="{{dataTransaction?.info_add_pago_act}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Fecha Efectiva" value="{{dataTransaction?.pto_servicio}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Bin Adquiriente" value="{{dataTransaction?.bin}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Codigo Moneda Tx" value="{{dataTransaction?.cod_mone}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Chip" value="{{dataTransaction?.chip}}">
+                    <button mat-icon-button matSuffix (click)="infoChip()" style="font-size: 24px">
+                <mat-icon  matSuffix>
+            data_exploration
+          </mat-icon>
+      </button>
+                </mat-form-field>
+            </div>
+            <div style="margin-left: 40px;margin-top: 40px;">
+                <mat-form-field>
+                    <input matInput placeholder="No. Cuota Actual" value="{{dataTransaction?.num_cuota_act}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Código Autorización" value="{{dataTransaction?.cod_aut}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Fecha Proceso" value="{{dataTransaction?.fecha_proceso}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Lee Banda" value="{{dataTransaction?.lee_banda}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Rubro del Comercio" value="{{dataTransaction?.rubro}}">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Tokenizada" value="{{dataTransaction?.tokenizada}}">
+                    <button mat-icon-button matSuffix (click)="tokenizada()" style="font-size: 24px">
+                    <mat-icon matSuffix>
+                        text_snippet
+                    </mat-icon>
+                    </button>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button  color="primary" style="margin-left: 8px;">Gestionar Cuenta</button>
+        <button mat-raised-button  color="accent" style="margin-left: 8px;" (click)="infoObjetar()">Objetar</button>
+        <button mat-raised-button  color="warn" style="margin-left: 8px;">Cargar/Abonar</button>
+    </div>
+</mat-card>

@@ -1,0 +1,29 @@
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-card{
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12) !important;
+    width: 98%;
+  }
+
+.mat-toolbar {
+  background: #26c6da;
+  color: white;
+  font-size: x-large;
+}
+
+.icon{
+  color: #0d9dee;
+  font-size: 36px;
+}
+
+.matInput{
+  width: 100px;
+}

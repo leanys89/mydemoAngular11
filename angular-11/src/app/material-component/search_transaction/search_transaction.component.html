@@ -1,0 +1,117 @@
+<div fxLayout="row">
+	<div fxFlex.gt-sm="100%">
+	  <mat-toolbar class="card-header">
+			<div class="header">
+			  <p>Búsqueda de Transacciones</p>
+			</div>  
+	  </mat-toolbar>
+	  <mat-card>
+		<mat-card-content>
+		  <form #f="ngForm">
+			<div fxLayout="row" fxLayoutAlign="center">
+
+				<div fxFlex.gt-sm="25" fxFlex.gt-xs="25" id="categoria">
+					<mat-form-field  fxFlex required>
+					  <mat-select placeholder=" Categorías" name="Categoria" ngDefaultControl [(ngModel)]="filter.ct" [ngModelOptions]="{standalone: true}">
+						<mat-option *ngFor="let categ of categs" [value]="categ.id">
+							{{categ.description}}
+						</mat-option>
+					  </mat-select>
+					</mat-form-field>
+				</div>
+				<div fxFlex.gt-lg="30" fxFlex.gt-lg="30" ></div> 
+					<div fxFlex.gt-sm="25" fxFlex.gt-xs="25">
+						<mat-form-field class="example-full-width">
+							<input matInput [matDatepicker]="picker" placeholder="Fecha de inicio" id="fecha_ini" required>
+							<mat-datepicker-toggle matSuffix [for]="picker">
+								<mat-icon matDatepickerToggleIcon>event</mat-icon>
+							</mat-datepicker-toggle>
+							<mat-datepicker #picker></mat-datepicker>
+						</mat-form-field>
+					</div>
+					<div fxFlex.gt-sm="30" fxFlex.gt-xs="30"></div>
+					<div fxFlex.gt-sm="25" fxFlex.gt-xs="25" >
+						<mat-form-field>
+							<input matInput [matDatepicker]="picker1" placeholder="Fecha de fin" id="fecha_fin" required>
+							<mat-datepicker-toggle matSuffix [for]="picker1">
+								<mat-icon matDatepickerToggleIcon>event</mat-icon>
+							</mat-datepicker-toggle>
+							<mat-datepicker #picker1></mat-datepicker>
+							<mat-error *ngIf="">Este campo no puede ser vacio</mat-error>
+						</mat-form-field>
+					</div>
+			  <div fxFlex.gt-sm="30" fxFlex.gt-xs="30" ></div> 
+			  <div fxFlex.gt-sm="25" fxFlex.gt-xs="25">
+				<mat-dialog-actions fxLayout fxLayoutAlign="center">
+				  <button mat-raised-button color="primary" (click)="search()" type="submit" id="btnSearch">Buscar
+					<mat-icon>search</mat-icon>
+				  </button>
+				</mat-dialog-actions>
+			  </div>
+			  <div fxFlex.gt-sm="25" fxFlex.gt-xs="25" >
+				<mat-dialog-actions fxLayout fxLayoutAlign="center">
+				  <button mat-raised-button color="warn" (click)="clearFilters()" type="submit" id="btnClear">Limpiar
+					<mat-icon>clear</mat-icon>
+				  </button>
+				</mat-dialog-actions>
+			  </div>
+			</div>
+		  </form>  
+</mat-card-content>  
+</mat-card>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+	<!-- Position Column -->
+	<ng-container matColumnDef="num_tc" >
+	  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> No.TC </th>
+	  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.num_tc}} </td>
+	</ng-container>
+  
+	
+	<!-- Weight Column -->
+	<ng-container matColumnDef="comercio" >
+	  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Comercio </th>
+	  <td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.comercio}} </td>
+	</ng-container>
+
+	<!-- Weight Column -->
+	<ng-container matColumnDef="pais" >
+		<th mat-header-cell *matHeaderCellDef style="text-align: center;"> País </th>
+		<td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.pais}} </td>
+	  </ng-container>
+
+	<!-- Weight Column -->
+	<ng-container matColumnDef="mont_orig">
+		<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Monto Orig </th>
+		<td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.mont_orig}} </td>
+	  </ng-container>
+
+	<!-- Weight Column -->
+	<ng-container matColumnDef="monto">
+		<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Monto </th>
+		<td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.monto}} </td>
+	  </ng-container>
+
+	<!-- Weight Column -->
+	<ng-container matColumnDef="cod_razon">
+		<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Cod Razon </th>
+		<td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.cod_razon}} </td>
+	  </ng-container>
+	
+	<!-- Weight Column -->
+	<ng-container matColumnDef="status">
+		<th mat-header-cell *matHeaderCellDef style="text-align: center;"> Estatus </th>
+		<td mat-cell *matCellDef="let element" style="text-align: center;"> {{element.status}} </td>
+	  </ng-container>
+  
+	<!-- Detalle Column -->
+	<ng-container matColumnDef="detalle">
+	  <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Detalle </th>
+	  <td mat-cell *matCellDef="let row" style="text-align: center;">
+		<mat-icon class="icon" id="ico" matTooltip="Detalles" (click)="detalles(row)" matTooltipPosition="above">preview</mat-icon>
+	  </td>
+	</ng-container>
+  
+	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
